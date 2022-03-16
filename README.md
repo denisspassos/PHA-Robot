@@ -1,2 +1,2 @@
 # PrimeHeroAcademy
-PHA - Módulo 2: Automação de testes com Robot Framework
+Prime Hero Academy - Módulo 2: Automação de testes com Robot Framework
