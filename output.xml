@@ -1,17 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220315 21:42:14.854" rpa="false" schemaversion="2">
-<suite id="s1" name="Exercicios" source="C:\Users\denis\Desktop\Prime Control\CursoRobotPHA\exercicios.robot">
-<test id="s1-t1" name="Imprimindo no console as informações da PESSOA">
+<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220316 21:23:50.801" rpa="false" schemaversion="2">
+<suite id="s1" name="Exercicios1603" source="c:\Users\denis\Desktop\Prime Control\PHA-Robot\exercicios1603.robot">
+<test id="s1-t1" name="Cenario: Imprimir paises que visitei">
+<kw name="Imprimindo lista de paises">
+<arg>Suiça</arg>
+<arg>Itália</arg>
+<arg>Irlanda</arg>
 <kw name="Log To Console" library="BuiltIn">
-<arg>${PESSOA.nome}</arg>
+<arg>\n</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220315 21:42:14.937" endtime="20220315 21:42:14.941"/>
+<status status="PASS" starttime="20220316 21:23:50.892" endtime="20220316 21:23:50.893"/>
 </kw>
-<status status="PASS" starttime="20220315 21:42:14.936" endtime="20220315 21:42:14.942"/>
+<for flavor="IN">
+<var>${PAIS}</var>
+<value>@{PAISES}</value>
+<iter>
+<var name="${PAIS}">Suiça</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Eu já viajei para: ${PAIS}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220316 21:23:50.894" endtime="20220316 21:23:50.895"/>
+</kw>
+<status status="PASS" starttime="20220316 21:23:50.894" endtime="20220316 21:23:50.895"/>
+</iter>
+<iter>
+<var name="${PAIS}">Itália</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Eu já viajei para: ${PAIS}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220316 21:23:50.896" endtime="20220316 21:23:50.897"/>
+</kw>
+<status status="PASS" starttime="20220316 21:23:50.896" endtime="20220316 21:23:50.897"/>
+</iter>
+<iter>
+<var name="${PAIS}">Irlanda</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Eu já viajei para: ${PAIS}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220316 21:23:50.898" endtime="20220316 21:23:50.899"/>
+</kw>
+<status status="PASS" starttime="20220316 21:23:50.897" endtime="20220316 21:23:50.899"/>
+</iter>
+<status status="PASS" starttime="20220316 21:23:50.893" endtime="20220316 21:23:50.899"/>
+</for>
+<status status="PASS" starttime="20220316 21:23:50.891" endtime="20220316 21:23:50.899"/>
+</kw>
+<status status="PASS" starttime="20220316 21:23:50.890" endtime="20220316 21:23:50.900"/>
 </test>
-<doc>Aqui estarão presentes todos os exercícios da aula de automação.
-Então não se sinta perdido pois aqui a gente descreve o que tá fazendo.</doc>
-<status status="PASS" starttime="20220315 21:42:14.854" endtime="20220315 21:42:14.945"/>
+<doc>Exercício 1: Crie uma keyword que cria um e-mail formado por nome_sobrenome_idade@robot.com,
+onde o nome, o sobrenome e a idade são recebidos via passagem de argumentos e, ao final, a keyword
+deve retornar esse email formatado. Imprima o e-mail retornado no console.
+Exercício 2: Crie uma keyword que imprima no console a frase "Estou no número: ${numero}" de 0 a 10.
+Exercício 3: Crie uma keyword que imprima no console 5 nomes de países.</doc>
+<status status="PASS" starttime="20220316 21:23:50.807" endtime="20220316 21:23:50.903"/>
 </suite>
 <statistics>
 <total>
@@ -20,7 +61,7 @@ Então não se sinta perdido pois aqui a gente descreve o que tá fazendo.</doc>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Exercicios">Exercicios</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Exercicios1603">Exercicios1603</stat>
 </suite>
 </statistics>
 <errors>
