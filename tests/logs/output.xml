@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220317 20:56:20.270" rpa="false" schemaversion="2">
+<suite id="s1" name="Exercicios1703" source="c:\Users\denis\Desktop\Prime Control\PHA-Robot\exercicios1703.robot">
+<test id="s1-t1" name="Caso de Teste 01: Pesquisar produto existente">
+<kw name="Abrir navegador" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220317 20:56:20.832" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20220317 20:56:20.831" endtime="20220317 20:56:22.243"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220317 20:56:22.243" endtime="20220317 20:56:22.389"/>
+</kw>
+<status status="PASS" starttime="20220317 20:56:20.830" endtime="20220317 20:56:22.389"/>
+</kw>
+<kw name="Acessar a página home do site Automation Practice">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>http://automationpractice.com/index.php</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220317 20:56:22.391" level="INFO">Opening url 'http://automationpractice.com/index.php'</msg>
+<status status="PASS" starttime="20220317 20:56:22.391" endtime="20220317 20:56:32.498"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>My Store</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20220317 20:56:32.514" level="INFO">Page title is 'My Store'.</msg>
+<status status="PASS" starttime="20220317 20:56:32.498" endtime="20220317 20:56:32.514"/>
+</kw>
+<status status="PASS" starttime="20220317 20:56:22.390" endtime="20220317 20:56:32.515"/>
+</kw>
+<kw name="Digitar o nome do produto &quot;Blouse&quot; no campo de pesquisa" sourcename="Digitar o nome do produto ${PRODUTO} no campo de pesquisa">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>id=search_query_top</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220317 20:56:32.517" endtime="20220317 20:56:32.578"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=search_query_top</arg>
+<arg>blouse</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220317 20:56:32.579" level="INFO">Typing text 'blouse' into text field 'id=search_query_top'.</msg>
+<status status="PASS" starttime="20220317 20:56:32.578" endtime="20220317 20:56:32.759"/>
+</kw>
+<status status="PASS" starttime="20220317 20:56:32.516" endtime="20220317 20:56:32.759"/>
+</kw>
+<kw name="Clicar no botão pesquisar">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//*[@name="submit_search"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220317 20:56:32.761" endtime="20220317 20:56:33.051"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[@name="submit_search"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220317 20:56:33.052" level="INFO">Clicking element 'xpath=//*[@name="submit_search"]'.</msg>
+<status status="PASS" starttime="20220317 20:56:33.052" endtime="20220317 20:56:36.738"/>
+</kw>
+<status status="PASS" starttime="20220317 20:56:32.760" endtime="20220317 20:56:36.739"/>
+</kw>
+<kw name="Conferir se o produto &quot;Blouse&quot; foi listado no site" sourcename="Conferir se o produto ${PRODUTO} foi listado no site">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//*[@src='http://automationpractice.com/img/p/7/7-home_default.jpg']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220317 20:56:36.741" endtime="20220317 20:56:36.804"/>
+</kw>
+<kw name="Page Should Contain Image" library="SeleniumLibrary">
+<arg>xpath=//*[@src='http://automationpractice.com/img/p/7/7-home_default.jpg']</arg>
+<doc>Verifies image identified by ``locator`` is found from current page.</doc>
+<msg timestamp="20220317 20:56:36.827" level="INFO">Current page contains image 'xpath=//*[@src='http://automationpractice.com/img/p/7/7-home_default.jpg']'.</msg>
+<status status="PASS" starttime="20220317 20:56:36.805" endtime="20220317 20:56:36.827"/>
+</kw>
+<status status="PASS" starttime="20220317 20:56:36.739" endtime="20220317 20:56:36.827"/>
+</kw>
+<kw name="Fechar navegador" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220317 20:56:36.829" endtime="20220317 20:56:39.095"/>
+</kw>
+<status status="PASS" starttime="20220317 20:56:36.828" endtime="20220317 20:56:39.096"/>
+</kw>
+<status status="PASS" starttime="20220317 20:56:20.828" endtime="20220317 20:56:39.097"/>
+</test>
+<doc>Busca em ecommerce</doc>
+<status status="PASS" starttime="20220317 20:56:20.277" endtime="20220317 20:56:39.100"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Exercicios1703">Exercicios1703</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

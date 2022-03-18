@@ -17,7 +17,13 @@ Criar robotmail
 
 Imprimindo em qual numero estou
     FOR    ${counter}     IN RANGE    0    11
-        Log To Console    Estou no número: ${counter}
+        IF    ${counter} == 0
+            Log To Console    \nEstou no número: ${counter}  
+        ELSE IF    ${counter} == 5 or ${counter} == 8
+            Log To Console    Número mágico detectado: ${counter}  
+        ELSE
+            Log To Console    Estou no número: ${counter}
+        END
     END
 
 Imprimindo lista de paises
@@ -37,5 +43,4 @@ Cenario: Imprimir de 0 a 10
     Imprimindo em qual numero estou
 
 Cenario: Imprimir paises que visitei
-    Imprimindo lista de paises    Suiça    Itália    Irlanda
-        
+    Imprimindo lista de paises    Suiça    Itália    Irlanda  

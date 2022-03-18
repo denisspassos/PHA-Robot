@@ -25,6 +25,5 @@ Acessar site
     Input Text                      ${INPUT_EMAIL}    fulano@mail.com
     Wait Until Element Is Visible   ${BOTAO_SKIPSIGNIN}
     Click Button                    ${BOTAO_SKIPSIGNIN}
-    Sleep    2
     Close Browser
     
